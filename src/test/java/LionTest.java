@@ -23,6 +23,7 @@ public class LionTest {
 		try {
 			Lion lion = new Lion(" ", feline);
 			lion.doesHaveMane();
+			Assert.fail("Exception thrown");
 		} catch (Exception thrown) {
 			assertNotEquals(" ", thrown.getMessage());
 		}
