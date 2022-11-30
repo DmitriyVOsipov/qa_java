@@ -4,6 +4,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.List;
+
+import static org.junit.Assert.assertNotEquals;
+
 public class FelineTest {
 
 	Feline feline;
@@ -40,14 +43,5 @@ public class FelineTest {
 		List<String> expectedList = List.of("Трава", "Различные растения");
 		List<String> actualList = feline.getFood("Травоядное");
 		Assert.assertEquals(expectedList, actualList);
-	}
-
-	@Test
-	public void animalKindNullTest() {
-		try {
-			feline.getFood("null");
-		} catch (Exception exception) {
-			exception.printStackTrace();
-		}
 	}
 }
